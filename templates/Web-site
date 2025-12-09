@@ -1,0 +1,6 @@
+Repo: your project is in https://github.com/chbvsnandini/mini-store-web-project (I uploaded files).
+README: updated with the public demo links.
+Public demo (temporary): https://kori-subsatirical-pat.ngrok-free.dev
+Products: https://kori-subsatirical-pat.ngrok-free.dev/products
+Example product: https://kori-subsatirical-pat.ngrok-free.dev/product/1
+Local server: your Flask app is running locally and the ngrok tunnel is forwarding to it.
