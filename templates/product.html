@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    {% if product %}
+    <title>{{ product.name }} - Mini Store</title>
+    <meta name="description" content="{{ product.description }}">
+    <link rel="canonical" href="{{ url_for('product_page', pid=product.id, _external=True) }}">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "{{ product.name }}",
+      "image": ["{{ product.image }}"],
+      "description": "{{ product.description }}",
+      "offers": {
+        "@type": "Offer",
+        "price": "{{ '%.2f'|format(product.price) }}",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "{{ url_for('product_page', pid=product.id, _external=True) }}"
+      }
+    }
+    </script>
+    {% else %}
+    <title>Product not found - Mini Store</title>
+    {% endif %}
+    <link rel="stylesheet" href="/static/css/style.css">
+  </head>
+  <body>
+    <header>
+      <div style="display:flex;align-items:center;justify-content:space-between">
+        <h1 style="margin:0">{{ product.name if product else 'Product Not Found' }}</h1>
+        <a href="/cart" id="cart-link" class="btn">Cart (<span id="cart-count">0</span>)</a>
+      </div>
+    </header>
+    <main style="max-width:800px;margin:20px auto;padding:0 20px;background:#fff;border-radius:8px;">
+      {% if product %}
+      <div style="display:flex;gap:18px;align-items:flex-start">
+        <img src="{{ product.image }}" style="width:320px;height:220px;object-fit:cover;border-radius:6px">
+        <div>
+          <h2>{{ product.name }}</h2>
+          <p style="font-weight:700">${{ '%.2f'|format(product.price) }}</p>
+          <p>{{ product.description }}</p>
+        </div>
+      </div>
+      {% else %}
+      <p>Product was not found.</p>
+      {% endif %}
+      <p style="margin-top:12px"><a href="/products">Back to all products</a></p>
+    </main>
+    <script src="/static/js/cart.js"></script>
+  </body>
+</html>
