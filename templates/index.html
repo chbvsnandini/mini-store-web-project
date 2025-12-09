@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Mini Store</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+  </head>
+  <body>
+    <header>
+      <div style="display:flex;align-items:center;justify-content:space-between">
+        <h1 style="margin:0">Mini Store</h1>
+        <div style="display:flex;gap:12px;align-items:center">
+          <form action="/search" method="get" style="display:flex;gap:6px;align-items:center">
+            <input name="q" placeholder="Search products" style="padding:6px 8px;border-radius:6px;border:1px solid #ddd">
+            <button class="btn" type="submit">Search</button>
+          </form>
+          <a href="/cart" id="cart-link" class="btn">Cart (<span id="cart-count">0</span>)</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="products" class="grid"></section>
+    </main>
+
+    <footer>
+      <small>Mini Store demo — products loaded from `/api/products`</small>
+    </footer>
+
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/cart.js"></script>
+  </body>
+</html>
