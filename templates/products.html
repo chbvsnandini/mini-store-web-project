@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>All Products - Mini Store</title>
+    <meta name="description" content="Browse all products at Mini Store"> 
+    <link rel="canonical" href="{{ url_for('products_page', _external=True) }}">
+    <link rel="stylesheet" href="/static/css/style.css">
+  </head>
+  <body>
+    <header>
+      <div style="display:flex;align-items:center;justify-content:space-between">
+        <h1 style="margin:0">All Products</h1>
+        <div style="display:flex;gap:12px;align-items:center">
+          <form action="/search" method="get" style="display:flex;gap:6px;align-items:center">
+            <input name="q" placeholder="Search products" style="padding:6px 8px;border-radius:6px;border:1px solid #ddd">
+            <button class="btn" type="submit">Search</button>
+          </form>
+          <a href="/cart" id="cart-link" class="btn">Cart (<span id="cart-count">0</span>)</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="grid">
+        {% for p in products %}
+        <article class="card">
+          <a href="{{ url_for('product_page', pid=p.id) }}"><img src="{{ p.image }}" alt="{{ p.name }}"></a>
+          <div class="body">
+            <h3 class="title"><a href="{{ url_for('product_page', pid=p.id) }}">{{ p.name }}</a></h3>
+            <div class="desc">{{ p.description }}</div>
+            <div style="display:flex;align-items:center;justify-content:space-between">
+              <div class="price">${{ '%.2f'|format(p.price) }}</div>
+            </div>
+          </div>
+        </article>
+        {% endfor %}
+      </section>
+    </main>
+    <footer>
+      <small>Mini Store</small>
+    </footer>
+    <script src="/static/js/cart.js"></script>
+  </body>
+</html>
