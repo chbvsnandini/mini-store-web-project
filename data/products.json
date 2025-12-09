@@ -1,0 +1,73 @@
+[
+  {
+    "id": 1,
+    "name": "Classic White T-Shirt",
+    "price": 19.99,
+    "image": "/static/images/product1.svg",
+    "description": "Comfortable cotton t-shirt, available in all sizes."
+  },
+  {
+    "id": 2,
+    "name": "Blue Jeans",
+    "price": 49.99,
+    "image": "/static/images/product2.svg",
+    "description": "Stylish slim-fit jeans with a slight stretch."
+  },
+  {
+    "id": 3,
+    "name": "Sneakers",
+    "price": 79.99,
+    "image": "/static/images/product3.svg",
+    "description": "Lightweight sneakers for everyday wear."
+  },
+  {
+    "id": 4,
+    "name": "Baseball Cap",
+    "price": 14.99,
+    "image": "/static/images/product4.svg",
+    "description": "Classic adjustable baseball cap."
+  }
+  ,
+  {
+    "id": 5,
+    "name": "Cozy Hoodie",
+    "price": 39.99,
+    "image": "/static/images/product5.svg",
+    "description": "Warm fleece hoodie with a soft brushed interior."
+  },
+  {
+    "id": 6,
+    "name": "Leather Jacket",
+    "price": 129.99,
+    "image": "/static/images/product6.svg",
+    "description": "Premium faux-leather jacket with zipper front."
+  },
+  {
+    "id": 7,
+    "name": "Aviator Sunglasses",
+    "price": 24.99,
+    "image": "/static/images/product7.svg",
+    "description": "UV-protection lenses with a classic aviator frame."
+  },
+  {
+    "id": 8,
+    "name": "Classic Wristwatch",
+    "price": 199.99,
+    "image": "/static/images/product8.svg",
+    "description": "Analog wristwatch with leather strap and water resistance."
+  },
+  {
+    "id": 9,
+    "name": "Travel Backpack",
+    "price": 59.99,
+    "image": "/static/images/product9.svg",
+    "description": "Durable backpack with laptop compartment and organizer pockets."
+  },
+  {
+    "id": 10,
+    "name": "Comfort Socks (3 pack)",
+    "price": 9.99,
+    "image": "/static/images/product10.svg",
+    "description": "Breathable cotton blend socks in assorted colors."
+  }
+]
