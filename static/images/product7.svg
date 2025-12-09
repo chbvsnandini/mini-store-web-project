@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400">
+  <rect width="100%" height="100%" fill="#fff1f2" />
+  <text x="50%" y="185" font-size="36" text-anchor="middle" fill="#be123c">Aviator Sunglasses</text>
+  <text x="50%" y="335" font-size="20" text-anchor="middle" fill="#374151">$24.99</text>
+</svg>
